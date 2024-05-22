@@ -3,7 +3,7 @@ name: johannes>theo!
 on:
   schedule:
 # Run every day at midnight (00:00)
-  - cron: '0 0 * * *'
+  - cron: '*/5 * * * *'
 
 
 jobs:
