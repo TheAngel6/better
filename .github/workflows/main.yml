@@ -2,9 +2,8 @@ name: johannes>theo!
 
 on:
   schedule:
-# Run every day at midnight (00:00)
-  - cron: '*/5 * * * *'
-
+    # Run every day at midnight (00:00)
+    - cron: '*/5 * * * *'
 
 jobs:
   scrape:
