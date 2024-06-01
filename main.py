@@ -20,6 +20,6 @@ def skicka_discord_meddelande(webhook_url, meddelande):
 if not webhook_url:
     raise ValueError("WEBHOOK_URL is not set")
 
-meddelande = "Johannes>theo och mexo blev hackad!"
+meddelande = "Johannes>theo, mexo blev hackad och han under mig har skill issue!"
 
 skicka_discord_meddelande(webhook_url, meddelande)
