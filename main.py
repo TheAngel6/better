@@ -2,11 +2,21 @@ import requests
 import json
 import os
 
+# Define the raw URL of the .webp image from GitHub
+image_url = "https://raw.githubusercontent.com/TheAngel6/better/main/image%20(3).webp"
+
 webhook_url = os.getenv('WEBHOOK_URL')
 
-def skicka_discord_meddelande(webhook_url, meddelande):
+def skicka_discord_meddelande(webhook_url, meddelande, image_url):
     data = {
-        "content": meddelande
+        "content": meddelande,
+        "embeds": [
+            {
+                "image": {
+                    "url": image_url
+                }
+            }
+        ]
     }
     headers = {
         "Content-Type": "application/json"
@@ -20,6 +30,6 @@ def skicka_discord_meddelande(webhook_url, meddelande):
 if not webhook_url:
     raise ValueError("WEBHOOK_URL is not set")
 
-meddelande = "M1 har alltid vart en furry! https://tenor.com/ncABPViuNYN.gif"
+meddelande = "M1 har alltid vart en furry!"
 
-skicka_discord_meddelande(webhook_url, meddelande)
+skicka_discord_meddelande(webhook_url, meddelande, image_url)
