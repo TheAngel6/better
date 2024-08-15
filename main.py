@@ -2,21 +2,12 @@ import requests
 import json
 import os
 
-# Define the raw URL of the .webp image from GitHub
-image_url = ""
-
+# Retrieve the webhook URL from environment variables
 webhook_url = os.getenv('WEBHOOK_URL')
 
-def skicka_discord_meddelande(webhook_url, meddelande, image_url):
+def skicka_discord_meddelande(webhook_url, meddelande):
     data = {
-        "content": meddelande,
-        "embeds": [
-            {
-                "image": {
-                    "url": image_url
-                }
-            }
-        ]
+        "content": meddelande
     }
     headers = {
         "Content-Type": "application/json"
@@ -27,9 +18,12 @@ def skicka_discord_meddelande(webhook_url, meddelande, image_url):
     else:
         print(f"Det uppstod ett fel: {response.status_code}, {response.text}")
 
+# Ensure that the webhook URL is provided
 if not webhook_url:
     raise ValueError("WEBHOOK_URL is not set")
 
-meddelande = "..."
+# Define the message you want to send
+meddelande = "."
 
-skicka_discord_meddelande(webhook_url, meddelande, image_url)
+# Call the function to send the message
+skicka_discord_meddelande(webhook_url, meddelande)
