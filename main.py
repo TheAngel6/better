@@ -3,7 +3,7 @@ import json
 import os
 
 # Define the raw URL of the .webp image from GitHub
-image_url = "https://raw.githubusercontent.com/TheAngel6/better/main/image%20(3).webp"
+image_url = ""
 
 webhook_url = os.getenv('WEBHOOK_URL')
 
