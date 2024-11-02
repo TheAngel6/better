@@ -23,7 +23,7 @@ if not webhook_url:
     raise ValueError("WEBHOOK_URL is not set")
 
 # Define the message you want to send
-meddelande = "only 1 in 10 dare to tap on the holy button: https://theangel6.github.io/testbeta/"
+meddelande = "you can always trust me"
 
 # Call the function to send the message
 skicka_discord_meddelande(webhook_url, meddelande)
