@@ -24,7 +24,7 @@ if not webhook_url:
 
 # Define the message you want to send
 meddelande = r"""
-            へ   ♡   ╱|、
+.       へ   ♡   ╱|、
      ૮  -   ՛ )      (`   -  7
        /   ⁻  ៸|       |、⁻〵
  乀 (ˍ, ل ل      じしˍ,)ノ
